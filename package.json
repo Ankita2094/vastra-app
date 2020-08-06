@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+	"start": "cd vastra-backend && node app.js && cd .."
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+	"postinstall": "ng build --output-path dist"
   },
   "private": true,
   "dependencies": {
@@ -33,11 +35,12 @@
     "zone.js": "~0.10.3",
 	 "@angular/cli": "~10.0.2",
     "@angular/compiler-cli": "~10.0.3",
-	"@angular-devkit/build-angular": "~0.1000.2",
+	
 	"typescript": "~3.9.5"
   },
   "devDependencies": {
     "@types/node": "^12.11.1",
+	"@angular-devkit/build-angular": "~0.1000.2",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^6.0.0",
