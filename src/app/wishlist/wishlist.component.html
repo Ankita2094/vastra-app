@@ -1,0 +1,97 @@
+<!-- <p>wishlist works!</p>
+
+
+<div class="row">
+    <div class="column"  *ngFor="let jobo of items | async">
+      <ul>
+        <div class="card-deck">
+          <div class="card">
+            
+            <a> <img src="/assets/Images/{{jobo.imgId}}.jpg" style="width: 200px; size: 200px; display: block; block-size: 150px;background-color: grey;" alt="image">
+              
+              <div class="card-body"><p style="font-style: normal" class="card-subtitle">{{jobo.titleName}}</p>
+              <p class="card-text column">${{jobo.price}}</p>
+              <p class="card-text column">Size: {{jobo.size}}</p>
+              <div class="card-footer"><button class="btn btn-secondary btn-block"  style="background-color: white; size: 20px;height: 30px;">
+                
+                <div><p style="font-size: small; color: black;" (click)="deleteItem(jobo)">Remove From Wishlist</p></div>
+              </button>
+              <button class="btn btn-secondary btn-block" style="background-color: white; size: 20px;height: 30px;" (click) ="addtoCart(jobo)">
+                <p style="font-size: small; color: black;">BAG</p></button>
+               </div>
+              
+            </div></a>
+              
+              
+          </div>
+        </div>
+        
+      </ul>
+      
+      
+    </div>
+    
+  </div>
+  <div>
+    
+  </div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <div class="container">
+    
+  <div class="row">
+    <div class="col-md-3 col-sm-6" *ngFor="let jobo of items | async">
+<div class="card-deck" style=" margin-bottom: 60px;">
+        <div class="card">
+      
+          <div class="product-grid3">
+              <div class="product-image3">
+                  <a>
+                      <img class="pic-1" src="/assets/Images/{{jobo.imgId}}.jpg" style="width: 200px; size: 200px; display: block; block-size: 150px;background-color: grey;">
+                      <img class="pic-2" src="/assets/Images/{{jobo.imgId}}.jpg" style="width: 200px; size: 200px; display: block; block-size: 150px;background-color: grey;">
+                  </a>
+                  <ul class="social">
+                      <li><a (click)="deleteItem(jobo)"><i class="fa fa-trash"></i></a></li>
+                      <li><a (click) ="addtoCart(jobo)"><i class="fa fa-shopping-bag"></i></a></li>
+                  </ul>
+                  
+              </div>
+              <div class="product-content card-footer">
+                  <h3 class="title"><a>{{jobo.titleName}}</a></h3>
+                  <div class="price">
+                    <p>USD {{jobo.price}} </p>
+          <p>Size: {{jobo.size}}</p>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<!-- <p>men works!</p>
+<body>
+  <div class="row">
+    <div class="column"  *ngFor="let jobo of items | async">
+      <ul>
+        <div class="card-deck">
+          <div class="card">
+            
+            <a> <img src="/assets/Images/{{jobo.imgId}}.jpg" style="width: 200px; size: 200px; display: block; block-size: 150px;background-color: grey;" alt="image">
+              
+              <div class="card-body"><p style="font-style: normal" class="card-subtitle">{{jobo.titleName}}</p>
+              <p class="card-text column">${{jobo.price}}</p>
+              
+             <div class="btn-group" role="group"  *ngFor="let jo of jobo.size">
+                <button type="button" class="btn btn-secondary" (click)="clickSize($event,jobo)">{{jo}}</button>
+                 
+               </div> 
+
+              
+            </div></a>
+              <div class="card-footer">
+                
+               
+                
+                <a type="button" class="card-link-secondary small text-uppercase mr-3" >
+                
+                  <p style="font-size: small; color: black;" (click) ="addtoWishlist(jobo,jo)"><i class="fa fa-star fa-2x" style="color: rgb(199, 33, 33); size: 2px;"></i></p>
+                </a> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a type="button" class="card-link-secondary small text-uppercase mr-3 align-items-right"  (click) ="addtoCart(jobo,jo)"><i class="fa fa-shopping-bag fa-2x" style="color: rgb(218, 156, 202); width: 70px;"></i>
+                </a></div>
+              
+          </div>
+        </div>
+        
+      </ul>
+      
+      
+    </div>
+    
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div> 
+
+</body> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="container">
+  
+  <div class="row">
+      <div class="col-md-3 col-sm-6" *ngFor="let jobo of items | async">
+        <div class="card-deck" style=" margin-bottom: 60px;">
+          <div class="card">
+          <div class="product-grid7">
+              <div class="product-image7">
+                  <a>
+                      <img class="pic-1" src="/assets/Images/{{jobo.imgId}}.jpg" style="width: 200px; size: 200px; display: block; block-size: 150px;background-color: grey;">
+                      
+                  </a>
+                  <ul class="social">
+                      
+                      <li><a  class="fa fa-star" (click) ="addtoWishlist(jobo,jo)"></a></li>
+                      <li><a (click) ="addtoCart(jobo,jo)" class="fa fa-shopping-bag"></a></li>
+                  </ul>
+                 
+              </div>
+              <div class="product-content">
+                  <h3 class="title"><a>{{jobo.titleName}}</a></h3>
+                  
+                  <div class="price">${{jobo.price}}
+                  </div>
+        <div class="btn-group" role="group"  *ngFor="let jo of jobo.size">
+              <button type="button" class="btn btn-secondary" (click)="clickSize($event,jobo)">{{jo}}</button>
+               
+             </div> 
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+  </div>
+</div>
