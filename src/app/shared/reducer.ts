@@ -45,7 +45,7 @@ export function cartReducer(cartState: Array<cartCatalog> = cartInitialState, ac
             return cartState.filter(item => item.imgId !== action.payload);
           
             case ShoppingActionTypes.DELETE_ALL:
-              return [];
+              return cartInitialState;
   
       default:
         return cartState;
