@@ -5,16 +5,7 @@ import { WishList } from './wishlist-list.model';
 import { Item } from '@syncfusion/ej2-angular-splitbuttons';
 
 const initialState: Array<ClothesCatalog> = [
-// {
-//     color : "",
-//     imgId: "Shoes_Img15",
-//     wear_type: "shoes",
-//     price: 50,
-//     titleName: "kapda",
-//     uniqueId: 1,
-//     totalCount: [],
-//     size : ["S","M"]
-// }
+
 ];
 const cartInitialState: Array<cartCatalog> = [
    

@@ -18,27 +18,14 @@ export class MainPageComponent implements OnInit {
   type : string = '';
   constructor(private myService: CatalogserviceService,
     private route: ActivatedRoute,private router:Router,private store: Store<AppState>) { }
-    // ,{relativeTo: this.route}
+    
   onStyleClick(event : any){
     this.type = event.target.textContent;
     this.router.navigate(['men'],{state: {data: this.type}});
-    // this.myService.getType(this.type).subscribe( 
-    //   // res => {
-    //   //   let temparr = new Array();
-    //   //   temparr.push(res.valueOf());
-    //   //   console.log(temparr);
-
-    //   //   },
-        
-    //   );
-
-    // console.log(this.type);
+    
 
   }
-  // onEditRecipe(){
-  //   this.router.navigate(['edit'],{relativeTo: this.route});
-  //   //this.router.navigate(['../',this.id,'edit'],{relativeTo: this.route});
-  //  }
+  
 
   ngOnInit(): void {
     this.items = this.store.select(store => store.cart);
@@ -48,13 +35,13 @@ export class MainPageComponent implements OnInit {
     this.store.select('cart').subscribe(d =>{
       
       let keys = Object.keys(d);
-      console.log(keys)
+      // console.log(keys)
       total = keys.length;
       if(total > 0){
         this.length = total;  
       }
-      console.log("length");
-      console.log(this.length);
+      // console.log("length");
+      // console.log(this.length);
       
       
     });

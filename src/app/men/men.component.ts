@@ -11,7 +11,7 @@ import {WishList} from '../shared/wishlist-list.model';
 import {LoadItemAction,ResetStateAction,AddToCartAction, AddToWishlistAction} from '../shared/actions';
 import {Observable} from 'rxjs';
 import {Store,State} from '@ngrx/store';
-// import {MatButtonModule} from '@angular/material/button';
+
 
 @Component({
   selector: 'app-men',
@@ -43,15 +43,15 @@ export class MenComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.store.select(store => store.shopping);
-    console.log("Initial State");
-    console.log(this.items);
+    //console.log("Initial State");
+    //console.log(this.items);
     this.route.params.subscribe(
       (params: Params)=> {
           this.type = history.state.data;
           this.myService.getType(this.type).subscribe( (catalog: Array<ClothesCatalog>) =>
              {
-              console.log("keys........")
-              console.log(Object.keys(catalog));
+              //console.log("keys........")
+              //console.log(Object.keys(catalog));
               this.store.dispatch(new ResetStateAction());
               for(let i of Object.keys(catalog)){
                 this.store.dispatch(new LoadItemAction(catalog[i]));
@@ -60,22 +60,17 @@ export class MenComponent implements OnInit {
               this.items = this.store.select(store => store.shopping);
               let temparr = new Array();
               temparr.push(catalog.valueOf());
-              console.log(temparr);
-              //this.wearTypeOutput = temparr[0];
-              console.log("idhar print karuga")
+              //console.log(temparr);
+             
+              //console.log("idhar print karuga")
               this.wearTypeOutput = catalog;
               this.store.select('shopping').subscribe(data =>{console.log(data)})
-              console.log();
-              // for(let i =0;i< this.wearTypeOutput.length;i++){
-              //   this.Images = this.wearTypeOutput[i]['imgId'];
-              //   console.log(this.Images);
-              // }
-              // for(let i =0;i< this.wearTypeOutput.length;i++){
-              // console.log(this.Images);}
+             // console.log();
+              
               },
               
             );
-          //console.log(this.editMode);
+         
           
       }
   );
@@ -138,9 +133,9 @@ export class MenComponent implements OnInit {
     if(this.size !== undefined && this.size !== ""){
       
     
-    console.log(typeof(this.size));
-    console.log(this.size);
-    console.log(Object.keys(data));
+    // console.log(typeof(this.size));
+    // console.log(this.size);
+    // console.log(Object.keys(data));
     let newData = {
       color: data['color'],
       imgId: data['imgId'],

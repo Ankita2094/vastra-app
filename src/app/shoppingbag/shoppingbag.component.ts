@@ -33,7 +33,7 @@ priceTotal : number;
     console.log("checking is shopping bag working");
     this.shopbag = this.cartService.getProducts();
     console.log(this.shopbag);
-    //this.store.select('shopping').subscribe(data =>{console.log(data)})
+    
     this.store.select('cart').subscribe(d =>{console.log(d)})
     this.items = this.store.select(store => store.cart);
       //console.log(Object.keys(this.items));
