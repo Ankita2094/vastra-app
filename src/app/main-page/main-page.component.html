@@ -47,8 +47,8 @@
               <li class="nav-item active">
                   <a class="nav-link" routerLink ="/wishlist"><i class="fa fa-star fa-2x" style="color: rgb(199, 33, 33); width: 70px;"></i></a>
                 </li>
-               <li class="nav-item active">
-                <a class="nav-link" routerLink ="/shoppingbag"><i class="fa fa-shopping-bag fa-2x" style="color: rgb(218, 156, 202); width: 30px;"></i><span _ngcontent-c1="" class="badge badge-warning">{{length}}</span></a>
+               <li class="nav-item active" *ngIf="(items$| async);let items">
+                <a class="nav-link" routerLink ="/shoppingbag"><i class="fa fa-shopping-bag fa-2x" style="color: rgb(218, 156, 202); width: 30px;"></i><span _ngcontent-c1="" class="badge badge-warning">{{items.length}}</span></a>
               </li> 
               
               <li class="dropdown">

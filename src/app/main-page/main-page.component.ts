@@ -41,6 +41,7 @@ export class MainPageComponent implements OnInit {
   //  }
 
   ngOnInit(): void {
+    this.items = this.store.select(store => store.cart);
 
     let total = 0;
     //var keys = Object.keys(this.items);
